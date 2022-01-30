@@ -1,0 +1,193 @@
+.Login {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../assets/image/login_background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .card {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    background: var(--neutralLightPure);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-right: 55px;
+    padding-left: 55px;
+    padding-bottom: 54px;
+    padding-top: 65px;
+    position: relative;
+    top: 80px;
+
+    .brand-title {
+      display: block;
+      font-size: 15px;
+      color: var(--neutralDarkPure);
+      line-height: 1.2;
+      text-align: center;
+      padding-bottom: 25px;
+    }
+
+    .title {
+      display: block;
+      font-size: 39px;
+      color: var(--neutralDarkPure);
+      line-height: 1.2;
+      text-align: center;
+      padding-bottom: 5px;
+    }
+
+    .form-box {
+      width: 100%;
+      margin-bottom: 40px;
+
+      span {
+        font-family: Poppins-Regular;
+        font-size: 14px;
+        color: var(--neutralDarkPure);
+        line-height: 1.5;
+        padding-left: 7px;
+        display: block;
+        width: 100%;
+      }
+
+      .content-form-box {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        svg {
+          flex: 1;
+          max-width: 31px;
+          position: relative;
+          top: 18px;
+          left: 4px;
+        }
+
+        input {
+          flex: 1;
+          font-family: Poppins-Medium;
+          font-size: 16px;
+          color: var(--neutralDarkPure);
+          line-height: 1.2;
+          display: block;
+          width: 100%;
+          height: 55px;
+          background: 0 0;
+          padding: 0 7px 0 7px;
+          outline: none;
+          border: none;
+        }
+
+        input:focus + .bar::before {
+          width: 100%;
+          background-color: #7f7f7f;
+        }
+    
+        input:focus + .bar {
+          border-bottom: 2px solid transparent;
+        }
+
+        .bar {
+          width: 100%;
+          border-bottom: 2px solid #d9d9d9;
+          position: absolute;
+          bottom: 0;
+  
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #7f7f7f;
+            -webkit-transition: all .4s;
+            -o-transition: all .4s;
+            -moz-transition: all .4s;
+            transition: all .4s
+          }
+        }
+      }
+    }
+
+    .btn-forget-pwd {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      float: right;
+    }
+
+    .container-login100-form-btn {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 35px;
+      cursor: pointer;
+      float: left;
+    }
+  
+    .wrap-login100-form-btn {
+        width: 100%;
+        display: block;
+        position: relative;
+        z-index: 1;
+        border-radius: 25px;
+        overflow: hidden;
+        margin: 0 auto;
+        box-shadow: 0 5px 30px 0 rgba(3,216,222,.2);
+        -moz-box-shadow: 0 5px 30px 0 rgba(3,216,222,.2);
+        -webkit-box-shadow: 0 5px 30px 0 rgba(3,216,222,.2);
+        -o-box-shadow: 0 5px 30px 0 rgba(3,216,222,.2);
+        -ms-box-shadow: 0 5px 30px 0 rgba(3,216,222,.2)
+    }
+    
+    .login100-form-bgbtn {
+      position: absolute;
+      z-index: -1;
+      width: 300%;
+      height: 100%;
+      background: #a64bf4;
+      background: linear-gradient(90deg, rgba(0,219,222,1) 0%, rgba(252,0,255,1) 35%, rgba(0,219,222,1) 70%, rgba(252,0,255,1) 100%);
+      top: 0;
+      left: -100%;
+      -webkit-transition: all .4s;
+      -o-transition: all .4s;
+      -moz-transition: all .4s;
+      transition: all .4s
+    }
+    
+    .login100-form-btn {
+        font-family: Poppins-Medium;
+        font-size: 16px;
+        color: var(--neutralLightPure);
+        line-height: 1.2;
+        text-transform: uppercase;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+  
+    .wrap-login100-form-btn:hover .login100-form-bgbtn {
+        left: 0
+    }
+  }
+}
