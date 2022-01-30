@@ -1,6 +1,5 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faGoogle} from '@fortawesome/free-brands-svg-icons';
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import './Login.scss';
@@ -13,6 +12,7 @@ const Login: React.FC = () => {
         <h2 className="brand-title">Login</h2>
 
         <form>
+          
           <div className="form-box">
             <span>E-mail</span>
             <div className="content-form-box">
@@ -21,6 +21,7 @@ const Login: React.FC = () => {
               <div className="bar" />
             </div>
           </div>
+
           <div className="form-box">
             <span>Senha</span>
             <div className="content-form-box">
@@ -29,6 +30,7 @@ const Login: React.FC = () => {
               <div className="bar" />
             </div>
           </div>
+
           <button className="btn-forget-pwd">Esqueci a senha</button>
 
           <div className="container-login100-form-btn">
@@ -44,7 +46,7 @@ const Login: React.FC = () => {
 
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Login;

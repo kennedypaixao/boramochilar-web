@@ -156,7 +156,7 @@
       width: 300%;
       height: 100%;
       background: #a64bf4;
-      background: linear-gradient(90deg, rgba(0,219,222,1) 0%, rgba(252,0,255,1) 35%, rgba(0,219,222,1) 70%, rgba(252,0,255,1) 100%);
+      background: var(--brand-gradient);
       top: 0;
       left: -100%;
       -webkit-transition: all .4s;
