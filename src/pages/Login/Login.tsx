@@ -1,10 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 import './Login.scss';
 
 const Login: React.FC = () => {
+
+  const  _navigate = useNavigate();
+
+  const _goAuth = (): void => {
+    _navigate("/Explorar", { replace: true });
+  };
+
   return (
     <section className="Login">
       <div className="card">
@@ -36,7 +44,7 @@ const Login: React.FC = () => {
           <div className="container-login100-form-btn">
             <div className="wrap-login100-form-btn">
               <div className="login100-form-bgbtn"></div>
-              <button className="login100-form-btn">
+              <button type="button" className="login100-form-btn" onClick={_goAuth}>
                Login
               </button>
             </div>
