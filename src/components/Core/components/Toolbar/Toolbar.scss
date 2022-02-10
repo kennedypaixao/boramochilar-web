@@ -1,0 +1,23 @@
+.Toolbar {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--neutralLightPure);
+  display: flex;
+  border-bottom: 2px solid;
+  border-bottom-color: var(--brand-purple);
+
+  .btn-menu {
+    border: none;
+    background-color: transparent;
+    color: var(--brand-purple);
+    cursor: pointer;
+  }
+
+  .page-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--neutralDarkPure);
+    margin: 0 15px;
+    padding: 0;
+  }
+}

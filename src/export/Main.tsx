@@ -1,6 +1,6 @@
 import React from 'react';
 import { Theme } from 'themes';
-import { PageRoutes } from 'routes'
+import PageRoutes from 'routes';
 
 import './Main.scss';
 
