@@ -1,57 +1,14 @@
 import React from 'react';
 import { Col,  Row } from 'react-bootstrap';
 import { faChartPie, faChartLine, faCalendarDay, faCoins } from '@fortawesome/free-solid-svg-icons';
-import { Chart, ChartWrapperOptions } from "react-google-charts";
 
 import Widget from 'components/Widget';
 import Card from 'components/Card';
 
+import { Area, Calendar, Geo, Bar } from 'components/Chart'
+
 import './Dashboard.scss';
 
-export const data = [
-  ["Year", "Sales"],
-  ["2013", 1000],
-  ["2014", 1170],
-  ["2015", 660],
-  ["2016", 1030],
-  ["2017", 2030],
-  ["2018", 3030],
-];
-
-const optionsCalendar = {
-  isStacked: true,
-  height: 400,
-  legend: { position: "top", maxLines: 6, visible: false },
-  vAxis: { minValue: 0 },
-};
-
-const dataCalendar = [
-  [
-    { type: "date", id: "Date" },
-    { type: "number", id: "Won/Loss" },
-  ],
-  [new Date(2022, 2, 4), 10],
-  [new Date(2022, 2, 5), 3],
-  [new Date(2022, 2, 7), -1],
-  [new Date(2022, 2, 8), 2],
-  [new Date(2022, 2, 12), -1],
-  [new Date(2022, 2, 13), 1],
-  [new Date(2022, 2, 15), 1],
-  [new Date(2022, 2, 16), -4],
-  [new Date(2022, 1, 4), 10],
-  [new Date(2022, 1, 5), 3],
-  [new Date(2022, 1, 7), -1],
-  [new Date(2022, 1, 8), 2],
-  [new Date(2022, 1, 12), -1],
-  [new Date(2022, 1, 13), 1],
-  [new Date(2022, 1, 15), 1],
-  [new Date(2022, 1, 16), -4],
-];
-
-export const options = {
-  title: "Red Sox Attendance",
-  height: 400,
-};
 
 const Dashboard: React.FC = () => {
   
@@ -83,49 +40,25 @@ const Dashboard: React.FC = () => {
       <Row className='no-wrap'>
         <Col>
           <Card title='Faturamento'>
-            <Chart
-              chartType="AreaChart"
-              width="100%"
-              height="400px"
-              data={data}
-              options={options}
-            />
+            <Area />
           </Card>
         </Col>
         <Col>
           <Card title='Calendário'>
-            <Chart
-               chartType="Calendar"
-               width="100%"
-               height="400px"
-               data={dataCalendar}
-               options={optionsCalendar}
-            />
+            <Calendar />
           </Card>
         </Col>
       </Row>
       <br/>
       <Row className='no-wrap'>
       <Col>
-          <Card title='Calendário'>
-            <Chart
-               chartType="Calendar"
-               width="100%"
-               height="400px"
-               data={dataCalendar}
-               options={optionsCalendar}
-            />
+          <Card title='Vendas Por Anúncio'>
+            <Bar />
           </Card>
         </Col>
         <Col>
-          <Card title='Faturamento'>
-            <Chart
-              chartType="AreaChart"
-              width="100%"
-              height="400px"
-              data={data}
-              options={options}
-            />
+          <Card title='Regiões de Clientes'>
+            <Geo />
           </Card>
         </Col>
       </Row>
