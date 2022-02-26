@@ -30,7 +30,7 @@
       box-shadow: -1px 11px 36px -2px rgb(0 0 0 / 20%);
 
       .card-title {
-        color: var(--brand-purple-dark);
+        color: var(--brand-purple);
       }
     }
   }
@@ -38,9 +38,11 @@
   .price {
     color: var(--brand-purple-dark);
     font-size: 24px;
-    text-align: center;
+    text-align: center!important;
+    margin-bottom: 0;
 
     small {
+      display: block;
       font-size: 12px;
       color: var(--brand-purple-dark);
       font-weight: 200;
