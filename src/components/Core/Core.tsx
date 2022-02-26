@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import Toolbar from './components/Toolbar';
 import Sidebar from './components/Sidebar';
 
+import { ICoreProps } from './Core.types';
 import './Core.scss';
 
-const Core: React.FC = ({ children }) => {
+const Core: React.FC<ICoreProps> = ({ title, children }) => {
 
   // Armazena o estado do side menu.
   const [_collapse, _setCollapse] = useState<boolean>(false);
@@ -23,7 +24,7 @@ const Core: React.FC = ({ children }) => {
       </div>
 
       <div className='CorePage-body'>
-        <Toolbar onMenuToggle={_onMenuToggle} pageName={"Dashboard"} />
+        <Toolbar onMenuToggle={_onMenuToggle} pageName={title} />
 
         <div className='content-pages'>
     	    {children}

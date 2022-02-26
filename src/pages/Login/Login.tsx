@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate, useLocation } from 'react-router-dom';
-import AuthContext from "context/auth/AuthContext";
+import AuthContext from "../../context/auth/AuthContext";
 
 import './Login.scss';
 
@@ -15,8 +15,8 @@ const Login: React.FC = () => {
   const _handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
 
-    let formData = new FormData(event.currentTarget);
-    let email = formData.get("user.email") as string;
+    const formData = new FormData(event.currentTarget);
+    const email = formData.get("user.email") as string;
 
     _auth.SignIn(email, () => {
       const locationState = _location.state as any;

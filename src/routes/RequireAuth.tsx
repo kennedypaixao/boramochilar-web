@@ -3,10 +3,10 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
-import AuthContext from 'context/auth/AuthContext';
-import Core from 'components/Core';
+import AuthContext from '../context/auth/AuthContext';
+import Core from '../components/Core';
 
-const RequireAuth = ({ children, withSideMenu }: { children: JSX.Element, withSideMenu: boolean }): ReactElement => {
+const RequireAuth = ({ children, withSideMenu, title }: { children: JSX.Element, withSideMenu: boolean, title: string }): ReactElement => {
   const auth = React.useContext(AuthContext);
   const location = useLocation();
 
@@ -15,7 +15,7 @@ const RequireAuth = ({ children, withSideMenu }: { children: JSX.Element, withSi
   }
 
   if(withSideMenu) {
-    return (<Core>{children}</Core>);
+    return (<Core title={title}>{children}</Core>);
   }
 
   return children;

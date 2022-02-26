@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import AuthManager from "manager/Auth/AuthManager";
+import AuthManager from "../manager/Auth/AuthManager";
 import RequireAuth from './RequireAuth';
 
-import Dashboard from 'pages/AuthPages/Dashboard';
-import ManagementOffers from 'pages/AuthPages/ManagementOffers';
-import Login from 'pages/Login';
+import Dashboard from '../pages/AuthPages/Dashboard';
+import ManagementOffers from '../pages/AuthPages/ManagementOffers';
+import Login from '../pages/Login';
 import React from 'react';
 
 const PageRoutes: React.FC = () => {
@@ -15,12 +15,12 @@ const PageRoutes: React.FC = () => {
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/Dashboard' element={
-            <RequireAuth withSideMenu={true}>
+            <RequireAuth withSideMenu={true} title="Dashboard">
               <Dashboard />
             </RequireAuth>
           } />
           <Route path='/Anuncios/Gerenciamento' element={
-            <RequireAuth withSideMenu={true}>
+            <RequireAuth withSideMenu={true} title="Gerenciamento">
               <ManagementOffers />
             </RequireAuth>
           } />

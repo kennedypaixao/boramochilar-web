@@ -1,6 +1,6 @@
-import { useState, useEffect, ReactNode, ReactElement} from 'react'
-import { AuthProvider } from "provider/AuthProvider";
-import AuthContext from 'context/auth/AuthContext';
+import React, { useState, useEffect, ReactNode, ReactElement} from 'react'
+import { AuthProvider } from "../../provider/AuthProvider";
+import AuthContext from '../../context/auth/AuthContext';
 
 const AuthManager = ({ children }: { children: ReactNode }): ReactElement =>  {
   const [user, setUser] = useState<any>(null);
@@ -29,7 +29,7 @@ const AuthManager = ({ children }: { children: ReactNode }): ReactElement =>  {
     return window.sessionStorage.getItem('boramochilar.auth') as string;
   };
 
-  let value = { user, SignIn, SignOut, IsUserAuthenticated };
+  const value = { user, SignIn, SignOut, IsUserAuthenticated };
 
   useEffect(() => {
     // Recupera a sessão ativa.
