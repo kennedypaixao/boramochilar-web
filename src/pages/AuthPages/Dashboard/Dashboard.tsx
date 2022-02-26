@@ -27,16 +27,16 @@ const Dashboard: React.FC = () => {
       </Row>
       <br />
       <Row>
-        <Col>
+        <Col sm='12' md='6' lg='4' xl='3' xxl='3'>
           <Widget iconProp={faCoins} title='Faturamento 24H' value='R$ 1.800,00' onClick={onClickEvent}></Widget>
         </Col>
-        <Col>
+        <Col sm='12' md='6' lg='4' xl='3' xxl='3'>
           <Widget iconProp={faChartLine} title='Compras Efetuadas 24H' value='60' onClick={onClickEvent}></Widget>
         </Col>
-        <Col>
+        <Col sm='12' md='6' lg='4' xl='3' xxl='3'>
           <Widget iconProp={faCalendarDay} title='Anuncios Ativos' value='250' onClick={onClickEvent}></Widget>
         </Col>
-        <Col>
+        <Col sm='12' md='6' lg='4' xl='3' xxl='3'>
           <Widget iconProp={faChartPie} title='Faturamento Total' value='R$ 2.800.650,00' onClick={onClickEvent}></Widget>
         </Col>
       </Row>

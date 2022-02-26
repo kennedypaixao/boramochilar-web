@@ -1,12 +1,20 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import OfferImage from '../../../../../../../assets/image/offer.jpg';
 
 import './OfferItem.scss';
 
 const OfferItem: React.FC = () => {
+
+  const _navigate = useNavigate()
+
+  const _onClickEvent = (): void => {
+    _navigate('/Anuncios/Gerenciamento/Detalhe/1', { replace: false });
+  }
+
   return (
-    <div className='OfferItem'>
+    <div className='OfferItem' onClick={_onClickEvent}>
       <Card>
         <Card.Img variant="top" src={OfferImage} />
         <Card.Body>
